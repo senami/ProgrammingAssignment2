@@ -5,13 +5,13 @@
 
 makeCacheMatrix <- function(mat = matrix(numeric())){
   if((nrow(mat)!=ncol(mat))||(det(mat)==0)){
-    print("This matrix is not inversible")
+    stop("This matrix is not inversible")
   }
   else{
     matInvers<-NULL
     set<- function(matInit){
       if((nrow(matInit)!=ncol(matInit))||(det(matInit)==0)){
-        print("This matrix is not inversible")
+        stop("This matrix is not inversible")
       }
       else{
         mat<<- matInit
